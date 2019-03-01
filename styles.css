@@ -17,7 +17,7 @@ header > h1{
     margin-top: 20px;
     color: black;
     text-align: center;
-    font-family:  Anton, sans-serif;
+    font-family:  Anton;
 
 }
 
@@ -30,7 +30,7 @@ header > h1{
     color:  white;
     font-size: 46px;
     padding: 15px 20px;
-    font-family: Anton, sans-serif;
+    font-family: Anton;
     position: relative;
 }
 
@@ -39,7 +39,7 @@ header > h1{
     color: white;
     font-size: 20px;
     padding: 2px 10px;
-    font-family: Anton, sans-serif;
+    font-family: Anton;
 }
 
 #user-label{
@@ -63,7 +63,7 @@ header > h1{
 .result > p{
     text-align: center;
     font-weight:  bold;
-    font-family: Anton, sans-serif;
+    font-family: Anton;
 }
 .choices{
     text-align: center;
@@ -85,5 +85,5 @@ img{
     color: white;
     margin-top: -30px;
     text-align: center;
-    font-family: Anton, sans-serif;
+    font-family: Anton;
 }
