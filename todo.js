@@ -22,6 +22,10 @@ function getComputerChoice(){
     const randomNumber = (Math.floor(Math.random() * 3));
     return choices[randomNumber];
 }
+/**
+ * @brief   Recebe uma palavra que vai ser convertida em outra
+ * @param {Palavra q vai ser covertida} word 
+ */
 function convert(word){
     if(word === "rock") return "Pedra";
     if(word === "paper") return "Papel";
@@ -30,20 +34,33 @@ function convert(word){
 
 
 }
+/**
+ * @brief   Caso o jogador ganha a rodada, somasse um ponto no seu score e uma mensagem da respectiva jogada
+ * @param {Escolha de jogada usuário} userChoice 
+ * @param {Escolha de jogada do computador} computerChoice 
+ */
 function win(userChoice, computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convert(userChoice)} ganha de ${convert(computerChoice)}. Você ganhou!`;
 }
-
+/**
+ * @brief   Caso o computador ganhe, somasse um ponto no seu score e uma mensagem a respectiva jogada
+ * @param {Escolha de jogada  do usuário} userChoice 
+ * @param {Escolha de jogada do computador} computerChoice 
+ */
 function lose(userChoice, computerChoice){
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convert(userChoice)} perde de ${convert(computerChoice)}. Você perdeu!`;
 }
-
+/**
+ * @brief   Caso de empate
+ * @param {Escolha de jogada do usuário} userChoice 
+ * @param {Escolha de jogada do computador} computerChoice 
+ */
 function draw(userChoice, computerChoice){
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
@@ -52,7 +69,7 @@ function draw(userChoice, computerChoice){
 }
 /**
  * @Brief   Resposável pela lógica do game
- * @param {Escolha do usuário} userChoice 
+ * @param {Escolha de jogada do usuário} userChoice 
  */
 function game(userChoice){
     const computerChoice = getComputerChoice();
@@ -81,7 +98,8 @@ function game(userChoice){
 }
 
 /**
- * @Brief   
+ * @Brief   Evento de click adicionado as _divs(rock,paper e scissor), juntamente com a interação ao clicar, 
+ * executando a function game
  */
 function main(){
 
